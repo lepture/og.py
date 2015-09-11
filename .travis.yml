@@ -1,0 +1,18 @@
+language: python
+
+python:
+    - "2.6"
+    - "2.7"
+    - "3.3"
+    - "3.4"
+
+script:
+    - python setup.py -q nosetests
+
+after_success:
+    - pip install coveralls
+    - nosetests --with-coverage --cover-package=og
+    - coveralls
+
+notifications:
+    email: false

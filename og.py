@@ -8,6 +8,9 @@
 
 import re
 
+__version__ = '0.1'
+__author__ = 'Hsiaoming Yang <me@lepture.com>'
+
 # use simple regex, no need for lxml
 META_TAG = re.compile(ur'<meta[^>]+content=[^>]+>', re.U | re.I)
 META_ATTR = re.compile(
