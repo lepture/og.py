@@ -46,3 +46,13 @@ def test_parse_twitter_card():
     '''
     rv = og.parse(html)
     assert rv[u'title'] == u'Python on A Hard Wheel'
+
+
+def test_empty_name():
+    html = u'<head><meta name="" content="empty name"></head>'
+    assert not og.parse(html)
+
+
+def test_empty_content():
+    html = u'<head><meta name="title" content=""></head>'
+    assert not og.parse(html)
