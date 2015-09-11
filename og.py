@@ -12,9 +12,9 @@ import re
 META_TAG = re.compile(ur'<meta[^>]+content=[^>]+>', re.U | re.I)
 META_ATTR = re.compile(
     ur'(name|property|content)=(?:\'|\")(.*?)(?:\'|\")',
-    re.U | re.I
+    re.U | re.I | re.S
 )
-TITLE = re.compile(ur'<title>(.*?)</title>', re.U | re.I)
+TITLE = re.compile(ur'<title>(.*?)</title>', re.U | re.I | re.S)
 
 
 def parse(content):
