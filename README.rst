@@ -1,8 +1,10 @@
-# OG
+OG
+==
 
 Parse open graph and twitter card from HTML content.
 
-## Usage
+Usage
+-----
 
 There is only one method:
 
@@ -13,6 +15,7 @@ There is only one method:
     data = og.parse(html)
 
 
-## Installation
+Installation
+------------
 
 It is just a small piece of code. It will not be published to PyPI. Grab the code yourself.
